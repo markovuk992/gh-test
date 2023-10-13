@@ -16,6 +16,7 @@ jobs:
         run: npm run test
   deploy:
     runs-on: ubuntu-22.04
+    needs: [run_unit_tests]
     steps:
       - name: Get code
         uses: actions/checkout@v3
